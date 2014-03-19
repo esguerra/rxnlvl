@@ -2,42 +2,23 @@
 
 # Boilerplate
 import sys
-sys.path.insert(1,"/home/user/bin/rxnlvl/") # Change this to the full path of rxnlvl
+sys.path.insert(1,"/Users/esguerra/development/python/rxnlvl/") # Change this to the full path of rxnlvl
 from rxnlvl import *
 
 # Plot
-p = plot([25.0,10.0],vbuf=10.0,hbuf=5.0,bgcolour=None, qualified='sortof')
+p = plot([10.0,10.0],vbuf=10.0,hbuf=5.0,bgcolour=None, qualified='sortof')
 
-p +  level(energy(   00, 'kjmol'),  1,    '1',      0x0)
-p +  level(energy(  -85.5, 'kjmol'),  2,  'EC1',      0x0)
-p +  level(energy(  244, 'kjmol'),  3, 'TS1a', 0xFF4444)
-p +  level(energy(   51, 'kjmol'),  3, 'TS1b',      0x0)
-p +  level(energy( -102, 'kjmol'),  4,  'DC1',      0x0)
-p +  level(energy(  -82, 'kjmol'),  5,    '2',      0x0)
-p +  level(energy( -111, 'kjmol'),  6,  'EC2',      0x0)
-p +  level(energy(  -83, 'kjmol'),  7, 'TS2b',      0x0)
-p +  level(energy(   18, 'kjmol'),  7, 'TS2a', 0x44FF44)
-p +  level(energy( -103, 'kjmol'),  8,  'DC2',      0x0)
-p +  level(energy(   85, 'kjmol'),  9,    '3',      0x0)
-p +  level(energy(  185, 'kjmol'), 10,    '4',      0x0)
-p +  level(energy(   25, 'kjmol'), 11,    '5',      0x0)
+p +  level(energy(   00,     'kcalmol'),  1,  'G1P',         0x0)
+p +  level(energy(   23.6,   'kcalmol'),  2,  'EaW',    0xFF4444)
+p +  level(energy(   14.4,   'kcalmol'),  2,  'EaP',         0x0)
+p +  level(energy(  -10.3,   'kcalmol'),  3,  'G16bpW', 0xFF4444)
+p +  level(energy(  -14.5,   'kcalmol'),  3,  'G16bpP',      0x0)
 
-p +  edge(    '1',  'EC1', 0x0, 0.4, 'normal')
-p +  edge(  'EC1', 'TS1a', 0x0, 0.2, 'normal')
-p +  edge(  'EC1', 'TS1b', 0x0, 0.4, 'normal')
-p +  edge( 'TS1a',  'DC1', 0x0, 0.2, 'normal')
-p +  edge( 'TS1b',  'DC1', 0x0, 0.4, 'normal')
-p +  edge(  'DC1',    '2', 0x0, 0.4, 'normal')
-p +  edge(    '2',  'EC2', 0x0, 0.4, 'normal')
-p +  edge(  'EC2', 'TS2b', 0x0, 0.4, 'normal')
-p +  edge(  'EC2', 'TS2a', 0x0, 0.2, 'normal')
-p +  edge( 'TS2a',  'DC2', 0x0, 0.2, 'normal')
-p +  edge( 'TS2b',  'DC2', 0x0, 0.4, 'normal')
-p +  edge(  'DC2',    '3', 0x0, 0.4, 'normal')
-p +  edge(    '3',    '4', 0x0, 0.4, 'normal')
-p +  edge(    '4',    '5', 0x0, 0.4, 'normal')
+p +  edge(  'G1P',  'EaW',   0x0, 0.4, 'normal')
+p +  edge(  'G1P',  'EaP',   0x0, 0.4, 'normal')
+p +  edge(  'EaW', 'G16bpW', 0x0, 0.2, 'normal')
+p +  edge(  'EaP', 'G16bpP', 0x0, 0.4, 'normal')
 
-
-p + baseline(energy( 0.0, 'kjmol'),colour=0x0,mode='dashed',opacity=0.1)
+p + baseline(energy( 0.0, 'kcalmol'),colour=0x0,mode='dashed',opacity=0.1)
 
 p.write()
