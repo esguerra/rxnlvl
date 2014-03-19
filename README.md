@@ -59,7 +59,7 @@ Now we can start adding elements to the plot.
     p +  level(energy(   0, 'kcalmol'),  1,    '1',      0x0)
 
 Each level object takes the following arguments:
-- `energy` - an `energy` object which represents the relative energy of the level. Each energy has 2 arguments - the energy as a floating point number, and the units, which can be `'kjmol'`, `'eh'` (Hartrees), `'ev'` (electronvolts), `'kcal'` (thermochemical kilocalories per mole) or `'wavenumber'`.
+- `energy` - an `energy` object which represents the relative energy of the level. Each energy has 2 arguments - the energy as a floating point number, and the units, which can be `'kjmol'`, `'eh'` (Hartrees), `'ev'` (electronvolts), `'kcalmol'` (thermochemical kilocalories per mole) or `'wavenumber'`.
 - `location` - the ordinal location of the level in the scheme. This must be a positive nonzero integer. Different levels can share the same location.
 - `name` - the name of the level in the scheme. Levels should not share the same name.
 - `colour` - A 24-bit hexadecimal integer representing the colour of the level.
@@ -80,7 +80,7 @@ Each edge object takes the folliwing arguments:
     p + baseline(energy( 0.0, 'kcalmol'),colour=0x0,mode='dashed',opacity=0.1)
 
 You can only have one baseline. The syntax should be fairly familiar:
-- `energy` - an `energy` object which represents the relative energy of the baseline. Each energy has 2 arguments - the energy as a floating point number, and the units, which can be `'kjmol'`, `'eh'` (Hartrees), `'ev'` (electronvolts), `'kcal'` (thermochemical kilocalories per mole) or `'wavenumber'`.
+- `energy` - an `energy` object which represents the relative energy of the baseline. Each energy has 2 arguments - the energy as a floating point number, and the units, which can be `'kjmol'`, `'eh'` (Hartrees), `'ev'` (electronvolts), `'kcalmol'` (thermochemical kilocalories per mole) or `'wavenumber'`.
 - `colour` - A 24-bit hexadecimal integer representing the colour of the edge.
 - `mode` - Choose either `'normal'` or `'dashed'`. Controls the appearance of the edge in terms of its dashed-linedness.
 - `opacity` - A float between 0.0 and 1.0 representing the opacity of the edge.
