@@ -3,7 +3,7 @@ rxnlvl
 
 A simple python package for drawing attractive chemical reaction energy level diagrams.
 
-![An energy level diagram](http://i.imgur.com/VMpnduy.png)
+![An energy level diagram](test.svg)
 
 What do I need?
 ------
