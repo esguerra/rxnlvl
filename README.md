@@ -94,3 +94,10 @@ You can only have one baseline. The syntax should be fairly familiar:
     p.write()
 
 Will dump a `*.svg` file of your plot to `stdout`. Have fun!
+
+
+###Some editing done online.
+The svg-edit google app allows one to edit the produced svg file easily:
+
+<http://svg-edit.googlecode.com/svn/branches/2.6/editor/svg-editor.html>
+
